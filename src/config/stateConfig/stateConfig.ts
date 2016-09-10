@@ -1,6 +1,3 @@
-// we need to manually annotate DI
-
-
 export function provideState($stateProvider, $urlRouterProvider, $locationProvider){
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/");
@@ -9,7 +6,14 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
   $stateProvider
     .state('home', {
       url: '/',
-      component: "ing-app" 
+      component: "ingApp"
+    });
+    var errorResolves  = { msg: function ($stateParams) {return  $stateParams.message; }};
+    errorResolves.msg.$inject = ['$stateParams'];
+    $stateProvider.state('error', {
+      url: '/err/:message',
+      component: "ingError" , 
+      resolve: errorResolves
     });
 }
 provideState.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];

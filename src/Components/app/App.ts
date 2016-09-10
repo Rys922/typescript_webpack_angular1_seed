@@ -1,9 +1,7 @@
-import { Component } from 'ng-metadata/core';
+import {Inject,Component } from "../../Decorators";
 
 
-
-@Component({
-    selector: "ing-app" , 
-    template: require('./App.tpl.html') ,
+@Component("App" , "ingApp",{
+    template: require("./App.tpl.html")
 })
-export  class AppComponent{}
+export default class AppComponent{}
