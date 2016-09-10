@@ -4,9 +4,12 @@
     "noImplicitAny": false,
     "removeComments": true,
     "sourceMap": true,
+    "moduleResolution": "node",
     "module": "commonjs",
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "outDir": "out"
+    
   },
   "exclude": [
     "out",
@@ -17,5 +20,5 @@
     "typings/main",
     "reports"
   ],
-  "version": "1.7.5"
+  "version": "1.8.0"
 }

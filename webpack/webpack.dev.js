@@ -10,7 +10,7 @@ module.exports = {
     },
     resolve: {
         root: __dirname,
-        extensions: ['', '.ts', '.js', '.json']
+        extensions: ['', '.ts', '.js', '.json' ]
     },
     resolveLoader: {
         modulesDirectories: ["node_modules"]
