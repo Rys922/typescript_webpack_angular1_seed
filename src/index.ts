@@ -24,6 +24,7 @@ var baseModule  = angular.module("App" , externalModulesNames);
 baseModule.config(provideState);
 baseModule.config(appHttpConfig);
 Bootstraper.BootstrapModule(baseModule);
+
 angular.bootstrap(document , [baseModule.name] )
 
 

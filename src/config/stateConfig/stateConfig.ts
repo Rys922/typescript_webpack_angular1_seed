@@ -8,8 +8,10 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
       url: '/',
       component: "ingApp"
     });
+
     var errorResolves  = { msg: function ($stateParams) {return  $stateParams.message; }};
     errorResolves.msg.$inject = ['$stateParams'];
+    
     $stateProvider.state('error', {
       url: '/err/:message',
       component: "ingError" , 
