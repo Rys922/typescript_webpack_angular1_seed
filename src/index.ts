@@ -9,16 +9,22 @@ import "./styles/screen.scss";
 import {appHttpConfig} from  "./config/httpConfig/httpConfig";
 import {provideState} from  "./config/stateConfig/stateConfig";
 
-import  "./Components/app/App"
-import  "./Components/Error/ErrorComponent"
+import  "./components/app/App"
+
+import  "./components/Error/ErrorComponent"
 import {Bootstraper } from "./Decorators";
+
+
+
+import  "./modules/application/common/CommonModule";
 
 const externalModulesNames:Array<any> = [
   'ui.router',
   'ui.bootstrap',
   'ngAnimate',
-  'ngSanitize'
-];
+  'ngSanitize',  
+  'IngCommon'
+  ];
 
 var baseModule  = angular.module("App" , externalModulesNames);
 baseModule.config(provideState);
