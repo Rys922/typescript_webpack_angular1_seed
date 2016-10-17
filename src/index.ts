@@ -12,7 +12,7 @@ import {provideState} from  "./config/stateConfig/stateConfig";
 import  "./Components/app/App"
 
 import  "./Components/Error/ErrorComponent"
-import {Bootstraper } from "./Decorators";
+import {Bootstraper } from "angular1_typescript_decorators/Decorators";
 
 
 

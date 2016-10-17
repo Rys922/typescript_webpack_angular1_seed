@@ -1,4 +1,4 @@
-import {Inject,Component } from "../../Decorators";
+import {Inject,Component } from "angular1_typescript_decorators/Decorators";
 import "./Error.scss"
 
 @Component("App" , "ingError" , {
