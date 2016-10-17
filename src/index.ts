@@ -9,9 +9,9 @@ import "./styles/screen.scss";
 import {appHttpConfig} from  "./config/httpConfig/httpConfig";
 import {provideState} from  "./config/stateConfig/stateConfig";
 
-import  "./components/app/App"
+import  "./Components/app/App"
 
-import  "./components/Error/ErrorComponent"
+import  "./Components/Error/ErrorComponent"
 import {Bootstraper } from "./Decorators";
 
 

@@ -2,7 +2,7 @@ import {Inject,Component } from "../../Decorators";
 import "./Error.scss"
 
 @Component("App" , "ingError" , {
-    template: require("./error.tpl.html"),
+    template: require("./Error.tpl.html"),
     bindings: {
         msg: "@"
     }
