@@ -16,9 +16,9 @@
     "angular-animate": "^1.5.8",
     "angular-mocks": "~1.5.8",
     "angular-sanitize": "^1.5.8",
-    "angular-typescript-decorators": "~0.1.0",
+    
     "angular-ui-bootstrap": "^2.1.3",
-    "angular-ui-router": "~1.0.0-beta.2",
+    "angular-ui-router": "~1.0.0-beta.3",
     "angular1_typescript_decorators": "git+https://github.com/bunny1985/Angular1TypescriptDecorators.git",
     "bootstrap": "3.3.6",
     "es6-promise": "^3.0.2",
