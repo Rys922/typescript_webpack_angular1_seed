@@ -6,17 +6,13 @@ import 'angular-ui-bootstrap';
 import "font-awesome/css/font-awesome.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/screen.scss";
-import {appHttpConfig} from  "./config/httpConfig/httpConfig";
-import {provideState} from  "./config/stateConfig/stateConfig";
-
-import  "./Components/app/App"
-
-import  "./Components/Error/ErrorComponent"
 import {Bootstraper } from "angular1_typescript_decorators/Decorators";
 
-
-
-import  "./modules/application/common/CommonModule";
+import {appHttpConfig} from  "./app/config/httpConfig/httpConfig";
+import {provideState} from  "./app/config/stateConfig/stateConfig";
+import  "./app/components/home/home" 
+import  "./app/components/error/error"
+import  "./modules/common/commonModule";
 
 const externalModulesNames:Array<any> = [
   'ui.router',

@@ -1,8 +1,8 @@
 import {Inject,Component } from "angular1_typescript_decorators/Decorators";
-import "./Error.scss"
+import "./style.scss"
 
 @Component("App" , "ingError" , {
-    template: require("./Error.tpl.html"),
+    template: require("./index.tpl.html"),
     bindings: {
         msg: "@"
     }
