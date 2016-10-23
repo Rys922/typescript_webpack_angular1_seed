@@ -9,8 +9,16 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
       component: "ingApp"
     });
 
-    var errorResolves  = { msg: function ($stateParams) {return  $stateParams.message; }};
-    errorResolves.msg.$inject = ['$stateParams'];
+    var errorResolves  = { msg: function ($stateParams, $http, $timeout, $q) {
+      
+      
+      var q = $timeout(function() {
+            
+            console.log("done");        
+                }, 2000)
+            
+      return  q }};
+    errorResolves.msg.$inject = ['$stateParams' , "$http", "$timeout" , "$q"];
     
     $stateProvider.state('error', {
       url: '/err/:message',

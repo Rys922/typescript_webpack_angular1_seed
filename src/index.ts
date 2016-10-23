@@ -12,6 +12,8 @@ import {appHttpConfig} from  "./app/config/httpConfig/httpConfig";
 import {provideState} from  "./app/config/stateConfig/stateConfig";
 import  "./app/components/home/home" 
 import  "./app/components/error/error"
+import  "./app/shared/components/menu/menu"
+import  "./app/shared/directives/loadingState";
 import  "./modules/common/commonModule";
 
 const externalModulesNames:Array<any> = [
@@ -25,6 +27,7 @@ const externalModulesNames:Array<any> = [
 var baseModule  = angular.module("App" , externalModulesNames);
 baseModule.config(provideState);
 baseModule.config(appHttpConfig);
+
 Bootstraper.BootstrapModule(baseModule);
 
 angular.bootstrap(document , [baseModule.name] )
