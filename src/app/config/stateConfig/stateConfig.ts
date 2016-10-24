@@ -6,7 +6,7 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
   $stateProvider
     .state('home', {
       url: '/',
-      component: "ingApp"
+      component: "home"
     });
 
     var errorResolves  = { msg: function ($stateParams, $http, $timeout, $q) {

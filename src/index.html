@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Angular typescript webpack</title>
 </head>
-<body >
-    <div class="overlay" state-loading  style="display: none;" >
-        <div class="overlay-content">
-            <h1>...Loading <i class='glyphicon glyphicon-refresh spinning'></i></h1>
-        </div>
-    </div>
+
+<body>
+    <ing-header caption="Hello Angular 1.5 Typescript and webpack"></ing-header>
+    <state-loading></state-loading>
     <top-menu></top-menu>
-    
-    <ui-view></ui-view>
+    <div class="content">
+        <ui-view></ui-view>
+    </div>
+    <ing-footer></ing-footer>
 </body>
+
 </html>

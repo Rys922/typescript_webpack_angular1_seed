@@ -13,9 +13,9 @@ import {provideState} from  "./app/config/stateConfig/stateConfig";
 import  "./app/components/home/home" 
 import  "./app/components/error/error"
 import  "./app/shared/components/menu/menu"
-import  "./app/shared/directives/loadingState";
-import  "./modules/common/commonModule";
 
+import  "./modules/common/commonModule";
+import "./app/shared/components/resolveStateIndicator/resolveStateIndicator"
 const externalModulesNames:Array<any> = [
   'ui.router',
   'ui.bootstrap',

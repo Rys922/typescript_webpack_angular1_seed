@@ -1,21 +1,13 @@
-import {Service } from "angular1_typescript_decorators/Decorators";
+import {Service, Inject } from "angular1_typescript_decorators/Decorators";
+import Setting from "./settings"
 
-export class MenuItem{
-    
-    subItems : Array<MenuItem>;
-    
-    constructor( public sref: string ,public caption: string) {
-        
-        
+@Service("App", "menuService")
+@Inject("settings")
+export class MenuService {
+    public getMenuItems() {
+        return this.settings.menu;
     }
-}
 
-@Service("App" , "menuService")
-export  class MenuService{
-    public getMenuItems(){
-        var menu = new Array<MenuItem>();
-        menu.push(new MenuItem("home" , "Home"));
-        menu.push(new MenuItem("error({message: 'Bula bula '})" , "ErrorPage"));
-        return menu;
+    constructor(private settings: Setting) {
     }
 }

@@ -7,11 +7,11 @@ import "./style.scss"
         msg: "@"
     }
 })
-@Inject("$http")
+
 export default  class ErrorComponent{
     
-    constructor(http ) {
-        http.get("aa");
+    constructor( ) {
+        
     }
     msg:any;
 }
