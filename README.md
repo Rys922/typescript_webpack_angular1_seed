@@ -5,6 +5,7 @@ And this all with sourcemaps in production support!!
 
 Credits goes to https://github.com/brechtbilliet/angular-typescript-webpack
 
+
 ========================
 
 ### WHAT'S COOL 
@@ -44,6 +45,9 @@ Build
 npm install
 npm run build
 ```
+this is how it should looks like 
+
+![Screenshot](screen.png)
 
 
 ### Features
