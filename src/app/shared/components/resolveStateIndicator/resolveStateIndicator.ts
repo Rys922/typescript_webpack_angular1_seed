@@ -9,16 +9,24 @@ export default class ResolveStateIndicator {
     public visible: boolean = false
     constructor($transitions) {
         let showLoading = () => {
-            console.log("show");
             this.visible = true;
         };
         let hideLoading = () => {
-            console.log("hide");
             this.visible = false;
         }
+        
         $transitions.onStart({}, showLoading);
         $transitions.onError({}, hideLoading);
         $transitions.onFinish({}, hideLoading);
     }
+    @Inject("")
+    doSomething(){
 
+    }
+
+}
+
+@Inject("a")
+export const Set =  {
+    "a": "a"
 }

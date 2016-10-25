@@ -1,21 +1,13 @@
-import "angular";
-import 'angular-animate';
-import 'angular-sanitize';
-import 'angular-ui-router';
-import 'angular-ui-bootstrap';
-import "font-awesome/css/font-awesome.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "./styles/screen.scss";
-import {Bootstraper } from "angular1_typescript_decorators/Decorators";
+import "./index.d/index_imports_libs"
+import "./index.d/index_imports_basic"
+import "./index.d/index_imports_styles"
 
+
+
+
+import {Bootstraper } from "angular1_typescript_decorators/Decorators";
 import {appHttpConfig} from  "./app/config/httpConfig/httpConfig";
 import {provideState} from  "./app/config/stateConfig/stateConfig";
-import  "./app/components/home/home" 
-import  "./app/components/error/error"
-import  "./app/shared/components/menu/menu"
-
-import  "./modules/common/commonModule";
-import "./app/shared/components/resolveStateIndicator/resolveStateIndicator"
 const externalModulesNames:Array<any> = [
   'ui.router',
   'ui.bootstrap',
