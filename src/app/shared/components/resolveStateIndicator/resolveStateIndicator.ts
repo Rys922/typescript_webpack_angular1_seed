@@ -19,14 +19,6 @@ export default class ResolveStateIndicator {
         $transitions.onError({}, hideLoading);
         $transitions.onFinish({}, hideLoading);
     }
-    @Inject("")
-    doSomething(){
 
-    }
 
-}
-
-@Inject("a")
-export const Set =  {
-    "a": "a"
 }
