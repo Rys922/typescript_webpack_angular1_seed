@@ -1,0 +1,15 @@
+<resource method="GET" url="/test.json" model="$ctrl.grid">
+<div>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in $ctrl.grid.model.records">
+                <td>{{item.a}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <grid-resource-pager model="$ctrl-grid"></grid-resource-pager> 
+    
+</div>
+</resource>

@@ -25,5 +25,10 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
       component: "ingError" , 
       resolve: errorResolves
     });
+
+    $stateProvider.state('grid', {
+      url: '/grid',
+      component: "grid" , 
+    });
 }
 provideState.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
