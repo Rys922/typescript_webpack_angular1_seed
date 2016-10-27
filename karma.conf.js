@@ -11,7 +11,7 @@ module.exports = function (config) {
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: false,
+        autoWatch: true,
         browsers: ['PhantomJS'],
         singleRun: true,
         autoWatchBatchDelay: 300,
@@ -21,7 +21,7 @@ module.exports = function (config) {
         ],
         babelPreprocessor: {
             options: {
-                presets: ['es2015']
+                presets: ['es6']
             }
         },
         preprocessors: {

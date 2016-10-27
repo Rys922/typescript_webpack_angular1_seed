@@ -1,13 +1,23 @@
+import {StateDeclaration} from "angular-ui-router";
+class HomeState implements StateDeclaration{
+    name= "home" ;
+    url= "/";
+    component = "home";
+
+}
+
+
 export function provideState($stateProvider, $urlRouterProvider, $locationProvider){
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/");
+  $stateProvider.state(new HomeState());
 
   // Now set up the states
-  $stateProvider
-    .state('home', {
-      url: '/',
-      component: "home"
-    });
+  // $stateProvider
+  //   .state('home', {
+  //     url: '/',
+  //     component: "home"
+  //   });
 
     var errorResolves  = { msg: function ($stateParams, $http, $timeout, $q) {
       
@@ -32,3 +42,4 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
     });
 }
 provideState.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+
