@@ -1,4 +1,5 @@
 import {StateDeclaration} from "angular-ui-router";
+import {StatesBootstraper} from "../../../StateDecorator"
 class HomeState implements StateDeclaration{
     name= "home" ;
     url= "/";
@@ -11,7 +12,7 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/");
   $stateProvider.state(new HomeState());
-
+  StatesBootstraper.registerStates($stateProvider);
   // Now set up the states
   // $stateProvider
   //   .state('home', {
@@ -36,10 +37,10 @@ export function provideState($stateProvider, $urlRouterProvider, $locationProvid
       resolve: errorResolves
     });
 
-    $stateProvider.state('grid', {
-      url: '/grid',
-      component: "grid" , 
-    });
+    // $stateProvider.state('grid', {
+    //   url: '/grid',
+    //   component: "grid" , 
+    // });
 }
 provideState.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
