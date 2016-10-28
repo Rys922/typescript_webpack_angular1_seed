@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+
     "target": "es5",
     "noImplicitAny": false,
     "removeComments": true,
@@ -8,7 +9,8 @@
     "module": "commonjs",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "outDir": "out"
+    "outDir": "out" 
+    
     
   },
   "exclude": [

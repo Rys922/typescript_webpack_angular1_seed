@@ -1,17 +1,33 @@
-import {Inject,Component } from "angular1_typescript_decorators/Decorators";
+import {Inject, Component  } from "angular1_typescript_decorators/Decorators";
+import {State} from "../../../StateDecorator"
 import "./style.scss"
 
-@Component("App" , "ingError" , {
+var loadingResolver = ($timeout) => {
+    var q = $timeout(function () {
+        console.log("done");
+    }, 2000)
+    return q
+}
+Inject("$timeout")(loadingResolver);
+
+
+@Component("App", "ingError", {
     template: require("./index.tpl.html"),
     bindings: {
         msg: "@"
     }
 })
+@State({
+    name: "error",
+    url: '/err/:message',
+    component: "ingError",
+    resolve: { msg: loadingResolver }
 
-export default  class ErrorComponent{
-    
-    constructor( ) {
-        
+})
+export default class ErrorComponent {
+
+    constructor() {
+
     }
-    msg:any;
+    msg: any;
 }

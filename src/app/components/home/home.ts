@@ -1,10 +1,16 @@
-import {Inject,Component } from "angular1_typescript_decorators/Decorators";
+import {Inject, Component } from "angular1_typescript_decorators/Decorators";
+import {State} from "../../../StateDecorator"
 
-@Component("App" , "home",{
+@Component("App", "home", {
     template: require("./index.tpl.html")
 })
-export default class AppComponent{
-    public res= {
-        catImg : require("./cat.jpg")
+@State({
+    name: "home",
+    component: "home",
+    url: "/"
+})
+export default class AppComponent {
+    public res = {
+        catImg: require("./cat.jpg")
     };
 }

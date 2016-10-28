@@ -10,7 +10,10 @@ export default class SettingsService {
             sref: "home", caption: "Home"
         } ,
         {
-            sref: "error({message: 'Bula bula '})" , caption : "Error"
+            sref: "error({message: 'Example Parameter '})" , caption : "Loading Example"
+        },
+        {   
+            sref: "grid" , caption : "Grid Example"
         }
     ];
 

@@ -27,4 +27,9 @@ Bootstraper.BootstrapModule(baseModule);
 angular.bootstrap(document , [baseModule.name] )
 
 
-
+baseModule.run( ( $httpBackend) => {
+  console.log("ionit");
+  $httpBackend.when("*.json")
+  .respond(
+    );
+} );
