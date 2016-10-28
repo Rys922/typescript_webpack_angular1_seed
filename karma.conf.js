@@ -7,21 +7,23 @@ webpackConfig.entry = {};
 module.exports = function (config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine' ],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: false,
+        autoWatch: true,
         browsers: ['PhantomJS'],
-        singleRun: true,
+        singleRun: false,
         autoWatchBatchDelay: 300,
         files: [
+
             './node_modules/phantomjs-polyfill/bind-polyfill.js',
+
             './src/test.ts'
         ],
         babelPreprocessor: {
             options: {
-                presets: ['es2015']
+                presets: ['es6']
             }
         },
         preprocessors: {
