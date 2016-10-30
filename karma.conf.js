@@ -16,10 +16,10 @@ module.exports = function (config) {
         singleRun: false,
         autoWatchBatchDelay: 300,
         files: [
-
-            './node_modules/phantomjs-polyfill/bind-polyfill.js',
-
-            './src/test.ts'
+	   {   pattern: '**/*.js.map', included: false}, 
+           './node_modules/phantomjs-polyfill/bind-polyfill.js',
+            './src/test.ts', 
+            {   pattern: './src/**/*.spec.ts', included: true}, 
         ],
         babelPreprocessor: {
             options: {
@@ -27,6 +27,7 @@ module.exports = function (config) {
             }
         },
         preprocessors: {
+            'src/**/*.spec.ts': ['webpack'] , 
             'src/test.ts': ['webpack'],
             'src/**/!(*.spec)+(.js)': ['coverage']
         },
