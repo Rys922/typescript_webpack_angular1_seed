@@ -1,7 +1,7 @@
-import {StateDeclaration , StateProvider} from "angular-ui-router";
+import {Ng1StateDeclaration , StateProvider} from "angular-ui-router";
 
 
-export function State(state: StateDeclaration){
+export function State(state: Ng1StateDeclaration){
     return (target) => {
         StatesBootstraper.addState(state);
     }
@@ -9,7 +9,7 @@ export function State(state: StateDeclaration){
 
 export namespace StatesBootstraper{
     var states = [];
-    export function addState(stateDeclaration: StateDeclaration){
+    export function addState(stateDeclaration: Ng1StateDeclaration){
         states.push(stateDeclaration);
     }
     export function registerStates(stateProvider : StateProvider){
