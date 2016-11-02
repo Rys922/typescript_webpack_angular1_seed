@@ -1,8 +1,8 @@
 import {Component, Inject} from "angular1_typescript_decorators/Decorators";
-require("./style.scss");
+require("./resolveStateIndicator.scss");
 
 @Component("App", "stateLoading", {
-    template: require("./index.tpl.html")
+    template: require("./resolveStateIndicator.tpl.html")
 })
 @Inject("$transitions")
 export default class ResolveStateIndicator {

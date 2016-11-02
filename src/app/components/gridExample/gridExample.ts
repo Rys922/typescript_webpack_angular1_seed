@@ -3,7 +3,7 @@ import {State} from "../../../StateDecorator"
 
 
 @Component("App", "grid", {
-    template: require("./index.tpl.html")
+    template: require("./gridExample.tpl.html")
 })
 @State({
     name: "grid",

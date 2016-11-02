@@ -1,6 +1,6 @@
 import {Inject, Component  } from "angular1_typescript_decorators/Decorators";
 import {State} from "../../../StateDecorator"
-import "./style.scss"
+import "./error.scss"
 
 var loadingResolver = ($timeout) => {
     var q = $timeout(function () {
@@ -12,7 +12,7 @@ Inject("$timeout")(loadingResolver);
 
 
 @Component("App", "ingError", {
-    template: require("./index.tpl.html"),
+    template: require("./error.tpl.html"),
     bindings: {
         msg: "@"
     }

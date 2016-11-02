@@ -1,7 +1,7 @@
 import {Component } from "angular1_typescript_decorators/Decorators";
-import "./style.scss"
+import "./footer.scss"
 @Component("IngCommon" , "ingFooter" , {
-    template: require("./index.tpl.html")
+    template: require("./footer.tpl.html")
 })
 export default class FooterComponent{
 /**

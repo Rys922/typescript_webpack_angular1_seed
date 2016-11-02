@@ -2,7 +2,7 @@ import {Inject, Component } from "angular1_typescript_decorators/Decorators";
 import {State} from "../../../StateDecorator"
 
 @Component("App", "home", {
-    template: require("./index.tpl.html")
+    template: require("./home.tpl.html")
 })
 @State({
     name: "home",
