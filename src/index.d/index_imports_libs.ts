@@ -1,4 +1,5 @@
 import "angular";
+import 'angular-mocks';
 import 'angular-animate';
 import 'angular-sanitize';
 import 'angular-ui-router';

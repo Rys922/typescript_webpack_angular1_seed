@@ -1,10 +1,12 @@
 # angular-typescript-webpack
 
 Angular + Typescript + Decorators + UI Rpouter + Webpack build with Karma and wallaby tests support.
-And this all with sourcemaps in production support!!
+
 
 Credits goes to https://github.com/brechtbilliet/angular-typescript-webpack
 
+
+30-10-2016 - HOW TO START TESTING [Read more !](README.test.md)
 
 ========================
 
@@ -14,6 +16,8 @@ Credits goes to https://github.com/brechtbilliet/angular-typescript-webpack
 - [x] Typescript Strong typing
 - [x] Modern router with (beta 3) UI-Roputer
 - [x] Decorators that allows you create Components easier then before
+
+
 
 
 ### Install

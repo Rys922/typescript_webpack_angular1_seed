@@ -2,6 +2,7 @@ import "./index.d/index_imports_libs"
 import "./index.d/index_imports_basic"
 import "./index.d/index_imports_styles"
 
+import "grid-resource"
 
 
 
@@ -13,7 +14,8 @@ const externalModulesNames:Array<any> = [
   'ui.bootstrap',
   'ngAnimate',
   'ngSanitize',  
-  'IngCommon'
+  'IngCommon', 
+  'BBGrid'
   ];
 
 var baseModule  = angular.module("App" , externalModulesNames);
@@ -25,4 +27,9 @@ Bootstraper.BootstrapModule(baseModule);
 angular.bootstrap(document , [baseModule.name] )
 
 
-
+baseModule.run( ( $httpBackend) => {
+  console.log("ionit");
+  $httpBackend.when("*.json")
+  .respond(
+    );
+} );

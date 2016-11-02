@@ -1,0 +1,22 @@
+<resource method="GET" url="/resources/test.json" model="$ctrl.grid">
+    <div class="container-fluid">
+        <table class="table table-table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Caption</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in $ctrl.grid.model.rows">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.caption}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <grid-resource-pager model="$ctrl-grid"></grid-resource-pager>
+
+    </div>
+</resource>
