@@ -14,6 +14,9 @@ export default class SettingsService {
         },
         {   
             sref: "grid" , caption : "Grid Example"
+        },
+        {   
+            sref: "todoList" , caption : "Todo Example"
         }
     ];
 

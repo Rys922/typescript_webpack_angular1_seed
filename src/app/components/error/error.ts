@@ -1,5 +1,5 @@
 import {Inject, Component  } from "angular1_typescript_decorators/Decorators";
-import {State} from "../../../StateDecorator"
+import {State} from "StateDecorator"
 import "./error.scss"
 
 var loadingResolver = ($timeout) => {

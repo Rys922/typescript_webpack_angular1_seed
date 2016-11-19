@@ -1,0 +1,4 @@
+
+<div>
+    <span ng-repeat="rating in [1,2, 3, 4 ,5] track by $index" class="glyphicon " ng-class="$ctrl.model<$index ?'glyphicon-star-empty' : 'glyphicon-star'" ng-click="$ctrl.changeRating($index)"> </span>
+</div>

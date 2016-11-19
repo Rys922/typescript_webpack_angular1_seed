@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-4">
+          Title:<input ng-model="$ctrl.item.title"  class="form-control" >
+    </div>
+    <div class="col-md-4">
+        
+            Description: <textarea ng-model="$ctrl.item.description" rows="1" class="form-control" ></textarea><br>
+            
+            
+        
+            
+    </div>
+    <div class="col-md-2">
+        Rating : <todo-priority model="$ctrl.item.priority" ></todo-priority>
+    </div>
+    <div class="col-md-1">
+        Done: <input type="checkbox" ng-model="$ctrl.item.isDone" />
+    </div>
+    <div class="col-md-1">
+          <button class="btn btn-danger" ng-click="$ctrl.delete()">  <span class="glyphicon glyphicon-trash"></span></button>
+    </div>
+</div>
+
+
+

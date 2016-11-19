@@ -11,7 +11,8 @@ module.exports = {
     },
     resolve: {
         root: __dirname,
-        extensions: ['', '.ts', '.js', '.json' ]
+        extensions: ['', '.ts', '.js', '.json' ] , 
+        modulesDirectories: ["src", "node_modules"]
     },
     resolveLoader: {
         modulesDirectories: ["node_modules"]

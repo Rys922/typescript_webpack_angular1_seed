@@ -15,7 +15,8 @@ const externalModulesNames:Array<any> = [
   'ngAnimate',
   'ngSanitize',  
   'IngCommon', 
-  'BBGrid'
+  'BBGrid',
+  'LocalStorageModule'
   ];
 
 var baseModule  = angular.module("App" , externalModulesNames);

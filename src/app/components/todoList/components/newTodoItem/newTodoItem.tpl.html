@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Add New item 
+    </div>
+    <div class="panel-body"> 
+            <form class="form">
+                <label for="name" >Title</label>
+                <input class="form-control"  name="name" ng-model="$ctrl.name"/>
+                <label for="description" >Description</label>
+                <textarea class="form-control"  name="description" ng-model="$ctrl.description" rows="3"></textarea>
+                <label for="priority" >Priority</label>
+                <todo-priority model="$ctrl.rating"></todo-priority>
+                <div class="pull-right">
+                    <button class="btn btn-primary" ng-click="$ctrl.save()"> Add</button>
+                    <button class="btn btn-secondary" ng-click="$ctrl.onCanceled()">Cancel</button>
+
+                </div>
+            </form>
+    
+    </div>
+</div>

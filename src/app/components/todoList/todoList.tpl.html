@@ -1,0 +1,20 @@
+
+<div class="row">
+    <div class="col-md-9">
+        <h3> TODO: </h3>
+        <div class="list-group">
+            <todo-list-item item="item" ng-repeat="item in $ctrl.todos" on-delete="$ctrl.delete(itemreference)" on-update="$ctrl.update(itemreference)" class="list-group-item"></todo-list-item>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <new-todo-item on-canceled="$ctrl.test()"></new-todo-item>
+    </div>
+</div>
+
+
+
+
+
+    
+
+
