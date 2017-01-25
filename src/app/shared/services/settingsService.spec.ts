@@ -1,4 +1,4 @@
-import SettingsService from "./settings"
+import SettingsService from "./settingsService"
 
 describe("Service: SettingsService", () => {
     var settingsService: SettingsService;

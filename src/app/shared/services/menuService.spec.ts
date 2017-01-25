@@ -1,5 +1,5 @@
-import {MenuService} from "./menuService"
-import SettingsService from "./settings"
+import {MenuService} from "./menuService";
+import SettingsService from "./settingsService";
 
 describe("Service: MenuService", () => {
     var menuService : MenuService;

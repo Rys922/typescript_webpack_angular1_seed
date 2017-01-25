@@ -1,5 +1,5 @@
-export function appHttpConfig($httpProvider) {
-  $httpProvider.defaults.withCredentials = true;// SEND CREDENTIALS with Ajax calls to other domains -prevent CORS iisues
-  $httpProvider.defaults.headers.common['Content-Type'] = 'application/json';
+export function appHttpConfig($httpProvider): void {
+  $httpProvider.defaults.withCredentials = true; // send credentials with Ajax calls to other domains -prevent CORS iisues
+  $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
 }
-appHttpConfig.$inject = ['$httpProvider'];
+appHttpConfig.$inject = ["$httpProvider"];

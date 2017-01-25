@@ -3,7 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: ['./src/index.ts'],
+    entry: ['./src/app.ts'],
     output: {
         filename: 'build.js',
         path: 'dist'
@@ -11,10 +11,11 @@ module.exports = {
     devtool: 'source-map',
     resolve: {
         root: __dirname,
-        extensions: ['', '.ts', '.js', '.json' ]
+        extensions: ['', '.ts', '.js', '.json' ] , 
+        modulesDirectories: ["src", "node_modules"]
     },
     resolveLoader: {
-        modulesDirectories: ["node_modules"]
+        modulesDirectories: ["src", "node_modules"]
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin(
