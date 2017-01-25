@@ -38,12 +38,12 @@ module.exports = {
             
             { from: './resources/**/*', to: './' }
         ]), 
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            'window.jquery': 'jquery'
-        })
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     'window.jQuery': 'jquery',
+        //     'window.jquery': 'jquery'
+        // })
     ],
     module:{
         loaders: loaders
