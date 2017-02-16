@@ -21,7 +21,7 @@
     "typings/main.d.ts",
     "typings/main",
     "reports" , 
-    "test.ts",
+    "src/test.ts",
     "./src/**/*.spec.ts"
   ],
   "version": "2.1.5"

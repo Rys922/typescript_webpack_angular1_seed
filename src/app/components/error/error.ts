@@ -4,7 +4,7 @@ import "./error.scss"
 
 var loadingResolver = ($timeout) => {
     var q = $timeout(function () {
-        console.log("done");
+        
     }, 2000)
     return q
 }

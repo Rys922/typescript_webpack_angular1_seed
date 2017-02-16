@@ -11,12 +11,12 @@ module.exports = {
     },
     
     resolve: {
-        root: __dirname,
-        extensions: ['', '.ts', '.js', '.json' ] , 
-        modulesDirectories: ["src", "node_modules"]
+        //root: __dirname,
+        extensions: [ '.ts', '.js', '.json' ] , 
+        modules: ["src", "node_modules"]
     },
     resolveLoader: {
-        modulesDirectories: ["src", "node_modules"]
+        modules: ["src", "node_modules"]
     },
     devtool: "source-map",
     plugins: [
@@ -47,6 +47,6 @@ module.exports = {
         // })
     ],
     module:{
-        loaders: loaders
+        rules: loaders
     }
 };

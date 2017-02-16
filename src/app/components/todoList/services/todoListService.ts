@@ -15,7 +15,7 @@ export default class TodoListService{
         }
     }
     public saveAll(){
-        console.log("save");
+        
         this.localStorage.set(this.key , this.todoList);
     }
     addItem(todoItem : TodoItem){

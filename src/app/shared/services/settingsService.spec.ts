@@ -1,4 +1,5 @@
-import SettingsService from "./settingsService"
+import SettingsService from "./settingsService";
+declare let angular:any;
 
 describe("Service: SettingsService", () => {
     var settingsService: SettingsService;

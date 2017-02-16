@@ -15,7 +15,7 @@ export namespace StatesBootstraper{
     }
     export function registerStates(stateProvider : StateProvider){
         angular.forEach(states , (state) => {
-            //console.log(state);
+            
             stateProvider.state(state);
         })
         states = [];

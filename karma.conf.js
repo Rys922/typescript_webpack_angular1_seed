@@ -2,12 +2,12 @@
 
 var webpackConfig = require('./webpack/webpack.test.js');
 
-webpackConfig.entry = {};
+webpackConfig.entry = null;
 
 module.exports = function (config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine' ],
+        frameworks: ['jasmine'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
@@ -16,24 +16,29 @@ module.exports = function (config) {
         singleRun: false,
         autoWatchBatchDelay: 300,
         files: [
-	   {   pattern: '**/*.js.map', included: false}, 
-           
-            './src/test.ts', 
-            {   pattern: './src/**/*.spec.ts', included: true}, 
+
+
+            
+            './src/test.ts',
+            {
+                pattern: './src/**/*.spec.ts',
+                included: true
+            },
         ],
         babelPreprocessor: {
             options: {
                 presets: ['es6']
             }
         },
+        
         preprocessors: {
-            'src/**/*.spec.ts': ['webpack'] , 
-            'src/test.ts': ['webpack'],
-            'src/**/!(*.spec)+(.js)': ['coverage']
+            'src/**/*.spec.ts': ['webpack' , 'sourcemap'] ,
+            'src/test.ts': ['webpack' ,   'sourcemap'],
+            
         },
         webpackMiddleware: {
             stats: {
-                chunkModules: false,
+                chunkModules: true,
                 colors: true
             }
         },
@@ -41,24 +46,11 @@ module.exports = function (config) {
         reporters: [
             'dots',
             'spec',
-            'coverage'
         ],
-        coverageReporter: {
-            reporters: [
-                {
-                    dir: 'reports/coverage/',
-                    subdir: '.',
-                    type: 'html'
-                },{
-                    dir: 'reports/coverage/',
-                    subdir: '.',
-                    type: 'cobertura'
-                }, {
-                    dir: 'reports/coverage/',
-                    subdir: '.',
-                    type: 'json'
-                }
-            ]
-        }
+         mime: {
+            'text/x-typescript': ['ts','tsx']
+        },
+
+  
     });
 };

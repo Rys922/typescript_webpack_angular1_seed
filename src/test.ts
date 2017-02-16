@@ -7,4 +7,4 @@ import "angular-sanitize";
 import "angular-ui-router";
 import "angular-ui-bootstrap";
 import "./app.ts";
-import "jasmine";
+//import "jasmine";

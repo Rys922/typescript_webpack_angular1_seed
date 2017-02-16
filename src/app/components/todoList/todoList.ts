@@ -40,7 +40,7 @@ class TodoList{
         
     }
     public ToggleNewVisibility(){
-        console.log("canceled");
+        
     }
 
     public delete(i){

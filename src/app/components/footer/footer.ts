@@ -4,11 +4,7 @@ import "./footer.scss";
     template: require("./footer.tpl.html")
 })
 export default class FooterComponent{
-/**
- *
- */
+
 constructor() {
-    console.log("init");
-    
 }
-} 
+}

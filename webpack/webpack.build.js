@@ -1,23 +1,30 @@
 var loaders = require("./loaders");
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
-
 module.exports = {
     entry: ['./src/app.ts'],
     output: {
         filename: 'build.js',
         path: 'dist'
     },
-    devtool: 'source-map',
+    
     resolve: {
-        root: __dirname,
-        extensions: ['', '.ts', '.js', '.json' ] , 
-        modulesDirectories: ["src", "node_modules"]
+        //root: __dirname,
+        extensions: [ '.ts', '.js', '.json' ] , 
+        modules: ["src", "node_modules"]
     },
     resolveLoader: {
-        modulesDirectories: ["src", "node_modules"]
+        modules: ["src", "node_modules"]
     },
+    devtool: "source-map",
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            inject: 'body',
+            hash: true
+        }),
         new webpack.optimize.UglifyJsPlugin(
             {
                 warning: false,
@@ -25,23 +32,13 @@ module.exports = {
                 comments: false
             }
         ),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            inject: 'body',
-            hash: true
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            'window.jquery': 'jquery'
-        })
+        new CopyWebpackPlugin([
+            
+            { from: './resources/**/*', to: './' }
+        ]), 
+
     ],
-    externals: {
-        
-        "angular": "angular"
-    },
     module:{
-        loaders: loaders
+        rules: loaders
     }
 };

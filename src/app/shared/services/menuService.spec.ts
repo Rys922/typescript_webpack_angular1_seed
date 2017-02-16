@@ -1,6 +1,8 @@
 import {MenuService} from "./menuService";
 import SettingsService from "./settingsService";
 
+declare let angular:any;
+
 describe("Service: MenuService", () => {
     var menuService : MenuService;
     var settings;
@@ -11,9 +13,9 @@ describe("Service: MenuService", () => {
          };
     beforeEach(angular.mock.module('App'));
 
-     beforeEach(angular.mock.inject(($injector) =>{
+     beforeEach(angular.mock.inject(($injector) =>{   
         
-                settings = $injector.get("settings");;
+                settings = $injector.get("settings");; 
          }));
     
     it('should be created and dependency should be inected ', ()=>  {    
@@ -22,6 +24,7 @@ describe("Service: MenuService", () => {
          expect(settings.menu).toBeDefined();
          expect(settings).toBeDefined();
          expect(s).toBeDefined();
+         
     });
     it('should return this same menu items as settings service (and should have at least one item )', ()=>  {    
          var s = CreateService();
