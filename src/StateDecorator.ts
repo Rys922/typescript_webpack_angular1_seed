@@ -1,4 +1,5 @@
 import {Ng1StateDeclaration , StateProvider} from "angular-ui-router";
+import * as angular from "angular";
 
 
 export function State(state: Ng1StateDeclaration){

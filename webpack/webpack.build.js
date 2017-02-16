@@ -37,6 +37,10 @@ module.exports = {
             'window.jquery': 'jquery'
         })
     ],
+    externals: {
+        
+        "angular": "angular"
+    },
     module:{
         loaders: loaders
     }

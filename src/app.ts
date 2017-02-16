@@ -3,7 +3,7 @@ import "./imports/basic";
 import "./imports/styles";
 import "grid-resource";
 
-
+import * as angular from "angular";
 
 import { Bootstraper } from "angular1_typescript_decorators/Decorators";
 import { appHttpConfig } from "./app/config/httpConfig/httpConfig";
