@@ -1,6 +1,6 @@
 import {Inject, Component  } from "angular1_typescript_decorators/Decorators";
 import {State} from "StateDecorator";
-import "./error.scss";
+
 
 var loadingResolver: Function = ($timeout: ng.ITimeoutService) => {
     var promise: ng.IPromise<void> = $timeout( () => {}, 2000);
