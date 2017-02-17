@@ -1,12 +1,12 @@
 var loaders = require("./loaders");
 var webpack = require('webpack');
 module.exports = {
-  
+
   output: {
     filename: 'build.js',
     path: 'tmp'
   },
-  devtool: 'inline-source-map' , 
+  devtool: 'inline-source-map',
   //target: "node" , 
   resolve: {
 
@@ -18,7 +18,10 @@ module.exports = {
   },
   devtool: "source-map-inline",
   plugins: [
-
+    new webpack.SourceMapDevToolPlugin({
+      filename: null, // if no value is provided the sourcemap is inlined
+      test: /\.(ts|js)($|\?)/i // process .js and .ts files only
+    })
   ],
   module: {
     loaders: loaders,

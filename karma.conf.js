@@ -7,7 +7,7 @@ webpackConfig.entry = null;
 module.exports = function (config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', "source-map-support"],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
@@ -15,10 +15,10 @@ module.exports = function (config) {
         browsers: ['PhantomJS'],
         singleRun: false,
         autoWatchBatchDelay: 300,
-        files: [
-
-
-            
+        files: [{
+                pattern: 'dist/**/*.js.map',
+                included: false
+            },
             './src/test.ts',
             {
                 pattern: './src/**/*.spec.ts',
@@ -30,11 +30,12 @@ module.exports = function (config) {
                 presets: ['es6']
             }
         },
-        
+
         preprocessors: {
-            'src/**/*.spec.ts': ['webpack' , 'sourcemap'] ,
-            'src/test.ts': ['webpack' ,   'sourcemap'],
-            
+            'src/app.ts' : [ 'webpack', 'sourcemap' ],
+            'src/**/*.spec.ts': ['webpack', 'sourcemap'],
+            'src/test.ts': ['webpack', 'sourcemap'],
+
         },
         webpackMiddleware: {
             stats: {
@@ -47,10 +48,10 @@ module.exports = function (config) {
             'dots',
             'spec',
         ],
-         mime: {
-            'text/x-typescript': ['ts','tsx']
+        mime: {
+            'text/x-typescript': ['ts', 'tsx']
         },
 
-  
+
     });
 };

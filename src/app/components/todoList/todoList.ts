@@ -32,7 +32,7 @@ Inject("todoListService")(todoResolver);
 
 })
 @Inject("todoListService" )
-class TodoList {
+export class TodoList {
 
     public todos: Array<ToDoItem>;
     constructor(      private todoService: TodoListService ) {
@@ -41,6 +41,8 @@ class TodoList {
     }
     public delete(i: ToDoItem) {
         this.todoService.removeItem(i);
+        let index: number = this.todos.indexOf(i);
+        this.todos.splice(index , 1);
     }
     public update() {
         this.todoService.saveAll();
