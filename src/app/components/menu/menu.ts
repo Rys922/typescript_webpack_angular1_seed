@@ -5,7 +5,7 @@ import  {MenuService} from  "app/shared/services/menuService";
     template: require("./menu.tpl.html")
 })
 @Inject("menuService")
-export default class TopMenuController{
+export default class TopMenuController {
     public menuItems: Array<any>;
     constructor(menuService: MenuService) {
         this.menuItems = menuService.getMenuItems();

@@ -1,4 +1,5 @@
 import {Component, Inject} from "angular1_typescript_decorators/Decorators";
+import {Transition, TransitionHookFn} from "angular-ui-router";
 require("./resolveStateIndicator.scss");
 
 @Component("App", "stateLoading", {
@@ -6,18 +7,17 @@ require("./resolveStateIndicator.scss");
 })
 @Inject("$transitions")
 export default class ResolveStateIndicator {
-    public visible: boolean = false
-    constructor($transitions) {
-        let showLoading = () => {
+    public visible: boolean = false;
+    constructor($transition:  Transition ) {
+        let showLoading: TransitionHookFn = () => {
             this.visible = true;
         };
-        let hideLoading = () => {
+        let hideLoading: TransitionHookFn = () => {
             this.visible = false;
-        }
-        
-        $transitions.onStart({}, showLoading);
-        $transitions.onError({}, hideLoading);
-        $transitions.onFinish({}, hideLoading);
+        };
+        $transition.onStart({}, showLoading);
+        $transition.onError({}, hideLoading);
+        $transition.onFinish({}, hideLoading);
     }
 
 

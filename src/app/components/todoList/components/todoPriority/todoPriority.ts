@@ -1,19 +1,19 @@
-import {Inject, Component  } from "angular1_typescript_decorators/Decorators";
+import {Component  } from "angular1_typescript_decorators/Decorators";
 
 
-@Component("App" , "todoPriority" , 
+@Component("App" , "todoPriority" ,
 {
-    template: require("./todoPriority.tpl.html"), 
+    template: require("./todoPriority.tpl.html"),
     bindings: {
-        model: '=', 
-        onChange: '&'
+        model: "=",
+        onChange: "&"
     }
 })
-class Priority{
+class Priority {
     public model;
     private onChange;
-    public changeRating(rating){
-        this.model=rating;
+    public changeRating(rating: number): void {
+        this.model = rating;
         this.onChange();
     }
 }

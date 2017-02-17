@@ -3,8 +3,5 @@ import "./footer.scss";
 @Component("App" , "ingFooter" , {
     template: require("./footer.tpl.html")
 })
-export default class FooterComponent{
-
-constructor() {
-}
+export default class FooterComponent {
 }

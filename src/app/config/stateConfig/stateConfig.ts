@@ -1,8 +1,7 @@
 
-import {StatesBootstraper} from "../../../StateDecorator";
+import {StatesBootstraper} from "StateDecorator";
 
-export function provideState($stateProvider: any, $urlRouterProvider: any, $locationProvider: any): void{
-  // for any unmatched url, redirect to /state1
+export function provideState($stateProvider: any, $urlRouterProvider: any, $locationProvider: any): void {
   $urlRouterProvider.otherwise("/");
   StatesBootstraper.registerStates($stateProvider);
 }

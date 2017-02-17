@@ -12,7 +12,7 @@ module.exports = {
     
     resolve: {
         //root: __dirname,
-        extensions: [ '.ts', '.js', '.json' ] , 
+        extensions: [ '.ts', '.js', '.json'  , '.html'] , 
         modules: ["src", "node_modules"]
     },
     resolveLoader: {

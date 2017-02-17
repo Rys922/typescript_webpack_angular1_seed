@@ -19,5 +19,4 @@ export default class SettingsService {
             sref: "todoList" , caption : "Todo Example"
         }
     ];
-
 }

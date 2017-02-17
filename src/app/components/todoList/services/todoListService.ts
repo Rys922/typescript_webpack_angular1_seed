@@ -1,48 +1,46 @@
-import {Inject, Service  } from "angular1_typescript_decorators/Decorators";
+import { Inject, Service } from "angular1_typescript_decorators/Decorators";
 import TodoItem from "../models/todoItem";
+import ToDoItem from "../models/todoItem";
 
-@Service("App" , "todoListService" )
+interface ILocalStorage {
+    get<T>(key: string): T;
+    set(key: string, value: any): void;
+}
+
+@Service("App", "todoListService")
 @Inject("localStorageService")
-export default class TodoListService{
-    
-    private todoList : Array<TodoItem>
-    private key:string;
-    constructor(private localStorage : any) {
-        this.key =  "todoListArray";
-        this.todoList = localStorage.get(this.key);
-        if(this.todoList==undefined || this.todoList==null){
+export default class TodoListService {
+    private static localSotrageKey: string = "todoListArray";
+    private todoList: Array<TodoItem>;
+
+
+    constructor(private localStorage: ILocalStorage) {
+        this.todoList = localStorage.get<Array<ToDoItem>>(TodoListService.localSotrageKey);
+        if (this.todoList === undefined || this.todoList === null) {
             this.todoList = [];
         }
     }
-    public saveAll(){
-        
-        this.localStorage.set(this.key , this.todoList);
+    public saveAll(): void {
+        this.localStorage.set(TodoListService.localSotrageKey, this.todoList);
     }
-    addItem(todoItem : TodoItem){
+    public addItem(todoItem: TodoItem): void {
         this.todoList.push(todoItem);
         this.saveAll();
     }
-    removeItem(todoItem : TodoItem){
-        let index = this.todoList.indexOf(todoItem);
-        this.todoList.splice(index , 1);
+    public removeItem(todoItem: TodoItem): void {
+        let index: number = this.todoList.indexOf(todoItem);
+        this.todoList.splice(index, 1);
         this.saveAll();
     }
-    rateItem(todoItem :TodoItem , rating: number){
+    public rateItem(todoItem: TodoItem, rating: number): void {
         todoItem.priority = rating;
         this.saveAll();
     }
-    toggleState(todoItem: TodoItem){
-        todoItem.isDone = ! todoItem.isDone;
+    public toggleState(todoItem: TodoItem): void {
+        todoItem.isDone = !todoItem.isDone;
         this.saveAll();
     }
-    getList(){
-        
+    public getList(): Array<ToDoItem> {
         return this.todoList;
     }
-
-    
-
-    
-
-
 }
