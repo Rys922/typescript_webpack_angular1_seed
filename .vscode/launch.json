@@ -2,9 +2,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceRoot}/dist",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${workspaceRoot}/*"//, // Example: "webpack:///./src/app.js" -> "/users/me/project/src/app.js"
+               // "webpack:///*": "*", // Example: "webpack:///C:/project/app.ts" -> "C:/project/app.ts"
+               // "meteor://💻app/*": "${webRoot}/*" // Example: "meteor://💻app/main.ts" -> "c:/code/main.ts"
+            }
+        },
+        {
             "name": "Launch",
             "type": "node",
-            "request": "launch",
+            "request": "attach",
             "program": "",
             "stopOnEntry": false,
             "args": [],

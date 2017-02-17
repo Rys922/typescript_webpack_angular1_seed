@@ -18,8 +18,11 @@ module.exports = {
     resolveLoader: {
         modules: ["src", "node_modules"]
     },
-    devtool: "source-map",
+    devtool: 'source-map' , 
     plugins: [
+         new webpack.LoaderOptionsPlugin({
+            debug: true
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             inject: 'body',
