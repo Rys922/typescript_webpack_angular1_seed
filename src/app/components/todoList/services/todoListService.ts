@@ -2,14 +2,24 @@ import { Inject, Service } from "angular1_typescript_decorators/Decorators";
 import TodoItem from "../models/todoItem";
 import ToDoItem from "../models/todoItem";
 
-interface ILocalStorage {
+export interface ILocalStorage {
     get<T>(key: string): T;
     set(key: string, value: any): void;
+    
 }
+export interface ITodoListService {
+    saveAll(): void;
+    addItem(todoItem: TodoItem): void;
+    removeItem(todoItem: TodoItem): void;
+    rateItem(todoItem: TodoItem, rating: number): void;
+    toggleState(todoItem: TodoItem): void;
+    getList(): Array<ToDoItem>;
+}
+
 
 @Service("App", "todoListService")
 @Inject("localStorageService")
-export default class TodoListService {
+export default class TodoListService  implements  ITodoListService {
     private static localSotrageKey: string = "todoListArray";
     private todoList: Array<TodoItem>;
 
